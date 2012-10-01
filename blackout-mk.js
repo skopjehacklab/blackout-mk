@@ -1,5 +1,5 @@
 (function (){
-    var blackoutHtmlString = "$$BHSTR$$";
+    var blackoutHtmlString = '<h1 style="color: rgb(153, 153, 153); ">Ова е изгледот на македонскиот интернет под законот ЗАКОН_ОВДЕ</h1> <p>Чувај го вебот отворен.  <a href="https://nash.link.do/nadleznite">контактирај ги надлежните</a> или  <a href="http://nash.link.do/doznajpoveke">дознај повеќе</a></p> ';
 	var root = this;
 
 	var SopaBlackout = function(){};
