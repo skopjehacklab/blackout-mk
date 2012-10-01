@@ -130,6 +130,7 @@
 		var blackout = create('div', {
 				position: 'absolute',
 				top: offsets[1],
+                left: offsets[0],
 				width: '100%',
 				backgroundColor: 'black',
 				textAlign: 'center',
