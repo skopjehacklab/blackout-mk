@@ -1,5 +1,5 @@
 (function (){
-    var blackoutHtmlString = "$$BHSTR$$";
+    var blackoutHtmlString = '$$BHSTR$$';
 	var root = this;
 
 	var SopaBlackout = function(){};
