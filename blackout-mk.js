@@ -139,7 +139,7 @@
 				color: '#999'},
 			create('h1', {color: '#999'}, txt(SopaBlackout.HEADER_TEXT)),
 			create('p', null,
-				txt("Keep the web open. "),
+				txt("Чувај го вебот отворен. "),
 			create('a', {href: "https://nash.link.do/nadleznite"}, txt("контактирај ги надлежните")),
 				txt(" или "),
 				create('a', {href: "http://nash.link.do/doznajpoveke"}, txt("дознај повеќе")))
