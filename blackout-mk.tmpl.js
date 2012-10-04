@@ -120,7 +120,7 @@
 		var body = document.body;
 		if (opts['id'] === false){
 			obj = body;
-			height = "100%";
+			height = body.clientHeight; // "100%";
 		}else{
 			obj = document.getElementById(opts['id']);
 			var height = parseInt(getStyle(obj, 'height'), 10);
