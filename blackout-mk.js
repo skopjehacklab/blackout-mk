@@ -89,7 +89,7 @@
 	var getOpts = function(){
 		var ret = {};
 		for (var key in SopaBlackout.DEFAULTS){
-			var k = 'sopablackout_' + key;
+			var k = 'blackout_' + key;
 			ret[key] = (typeof window[k] === 'undefined') ? SopaBlackout.DEFAULTS[key] : window[k];
 		}
 		return ret;
@@ -112,8 +112,8 @@
 	SopaBlackout.ZINDEX = Math.pow(2, 31) - 2;
 	SopaBlackout.DEFAULTS = {
 		'id': false,
-		'srsbzns': true,
-		'on': false
+		'serious': true,
+		'on': [2012,10,07]
 	};
 	SopaBlackout.blackout = function(opts){
 		var obj;
