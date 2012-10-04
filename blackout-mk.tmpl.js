@@ -120,7 +120,8 @@
 		var body = document.body;
 		if (opts['id'] === false){
 			obj = body;
-			height = body.clientHeight; // "100%";
+            height = Math.max(body.scrollHeight, body.offsetHeight, body.clientHeight);
+			//height = body.clientHeight; // "100%";
 		}else{
 			obj = document.getElementById(opts['id']);
 			var height = parseInt(getStyle(obj, 'height'), 10);
