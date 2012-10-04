@@ -120,7 +120,7 @@
 		var body = document.body;
 		if (opts['id'] === false){
 			obj = body;
-            height = Math.max(body.scrollHeight, body.offsetHeight, body.clientHeight);
+            height = Math.max(body.offsetHeight, body.clientHeight);
 			//height = body.clientHeight; // "100%";
 		}else{
 			obj = document.getElementById(opts['id']);
