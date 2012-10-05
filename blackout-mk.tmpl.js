@@ -113,7 +113,8 @@
 	SopaBlackout.DEFAULTS = {
 		'id': false,
 		'serious': true,
-		'on': [2012,10,07]
+		'on': false,
+        //[2012,10,07]
 	};
 	SopaBlackout.blackout = function(opts){
 		var obj;
