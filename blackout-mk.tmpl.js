@@ -120,8 +120,8 @@
 		var body = document.body;
 		if (opts['id'] === false){
 			obj = body;
-            //height = Math.max(body.offsetHeight ? body.offsetHeight : 0, body.clientHeight ? body.clientHeight : 0);
-			height = "100%";
+            height = Math.max(body.offsetHeight ? body.offsetHeight : 0, body.clientHeight ? body.clientHeight : 0);
+			//height = "100%";
 		}else{
 			obj = document.getElementById(opts['id']);
 			var height = parseInt(getStyle(obj, 'height'), 10);
@@ -134,6 +134,7 @@
 				top: offsets[1],
                 left: offsets[0],
 				width: '100%',
+                "min-height":"100%",
 				backgroundColor: 'black',
 				textAlign: 'center',
 				paddingTop: '10px',
