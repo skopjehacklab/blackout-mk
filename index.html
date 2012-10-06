@@ -62,7 +62,7 @@
             <p>Скриптата автоматски ке го активира затемнувањето на 09.10.2012</p>
 
             <p>Дополнителни опции за тестирање на скриптата</p>
-            <pre style="font-size:13px">:
+            <pre style="font-size:13px">
 &lt;script type="text/javascript"&gt;
     blackout_on = [2012,10,10] // само еден ден [година, месец, ден], или
     blackout_on = false; // без датум     
@@ -79,10 +79,16 @@
 
 
         </div>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript">
             blackout_serious = false;
             blackout_on = false;
+            $(function() {
+                $('.blackout-script-div a').live('click', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            });
         </script>
         <script type="text/javascript" src="blackout-mk.js"></script>
     </body>

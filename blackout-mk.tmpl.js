@@ -149,7 +149,7 @@
 		);
         if (blackoutHtmlString.length > 10) blackout.innerHTML = blackoutHtmlString;
 		if (opts['srsbzns'] !== true){
-			blackout.appendChild(create('p', {paddingTop: '250px', color: '#333'}, txt(SopaBlackout.CONTINUE_TEXT)));
+			blackout.appendChild(create('p', {paddingTop: '250px', color: '#fff', "font-size":"18px"}, txt(SopaBlackout.CONTINUE_TEXT)));
 			addEvent(blackout, 'click', function(e){
 				body.removeChild(blackout);
 			});

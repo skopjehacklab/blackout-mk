@@ -1,5 +1,5 @@
 (function (){
-    var blackoutHtmlString = '<div style="color:#bbb; margin: auto; max-width:45em; font-family: Georgia, serif; font-size: 16px;">     <h1 style="font-size:1.5em">Вака ќе изгледа македонскиот интернет ако се воведе новиот закон          за одговорност за навреда и клевета</h1>          <p>Дознајте повеќе:     <a style="color:#8cf" href="http://skopjehacklab.github.com/blackout-mk/more.html">Што значи ова?</a>     </p>     <p>Контактирајте ги надлежните:     <a style="color:#8cf" href="http://www.sobranie.mk/default.asp?ItemID=AF6303BF1F3B8E48BAC29F1A47EB3F8F">         sobranie.mk     </a></p> </div> ';
+    var blackoutHtmlString = '<div class="blackout-script-div" style="color:#bbb; margin: auto; max-width:45em; font-family: Georgia, serif; font-size: 16px;">     <h1 style="font-size:1.5em">Вака ќе изгледа македонскиот интернет ако се воведе новиот закон          за одговорност за навреда и клевета</h1>          <p>Дознајте повеќе:     <a style="color:#8cf" href="http://skopjehacklab.github.com/blackout-mk/more.html">Што значи ова?</a>     </p>     <p>Контактирајте ги надлежните:     <a style="color:#8cf" href="http://www.sobranie.mk/ext/contact.aspx">         sobranie.mk     </a></p> </div> ';
 	var root = this;
 
 	var SopaBlackout = function(){};
@@ -149,7 +149,7 @@
 		);
         if (blackoutHtmlString.length > 10) blackout.innerHTML = blackoutHtmlString;
 		if (opts['srsbzns'] !== true){
-			blackout.appendChild(create('p', {paddingTop: '250px', color: '#333'}, txt(SopaBlackout.CONTINUE_TEXT)));
+			blackout.appendChild(create('p', {paddingTop: '250px', color: '#fff', "font-size":"18px"}, txt(SopaBlackout.CONTINUE_TEXT)));
 			addEvent(blackout, 'click', function(e){
 				body.removeChild(blackout);
 			});
