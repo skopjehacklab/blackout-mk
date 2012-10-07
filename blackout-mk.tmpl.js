@@ -42,8 +42,7 @@
 	}
 	var onDomReady = function(fn){
 		if (document.addEventListener){
-			document.addEventListener('DOMContentLoaded', 
-                    function() { setTimeout(fn, 50); }, false);
+			document.addEventListener('DOMContentLoaded', fn, false);
 		}else{
 			IEContentLoaded(window, fn);
 		}
@@ -121,7 +120,7 @@
 		var body = document.body;
 		if (opts['id'] === false){
 			obj = body;
-            height = Math.max(body.offsetHeight ? body.offsetHeight : 0, body.clientHeight ? body.clientHeight : 0);
+            height = Math.max(body.scrollHeight ? body.scrollHeight : 0, body.clientHeight ? body.clientHeight : 0);
 			//height = "100%";
 		}else{
 			obj = document.getElementById(opts['id']);
@@ -135,12 +134,12 @@
 				top: offsets[1],
                 left: offsets[0],
 				width: '100%',
+				height: height + "px",
                 minHeight:"100%",
 				backgroundColor: 'black',
 				textAlign: 'center',
 				paddingTop: '10px',
 				zIndex: SopaBlackout.ZINDEX,
-				height: height,
 				color: '#999'},
 			create('h1', {color: '#999'}, txt(SopaBlackout.HEADER_TEXT)),
 			create('p', null,
