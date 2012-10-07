@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Blackout page builder",
   "dependencies": {
-
+    "optimist":"*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
