@@ -130,7 +130,7 @@
 		var offsets = findPos(obj);
 
 		var blackout = create('div', {
-				position: 'absolute',
+                position: ('ontouchstart' in document.documentElement ? 'absolute' : 'fixed'),
 				top: offsets[1],
                 left: offsets[0],
 				width: '100%',
