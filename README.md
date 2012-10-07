@@ -10,4 +10,13 @@
     <script type="text/javascript" 
         src="//skopjehacklab.github.com/blackout-mk/blackout-mk.js">
     </script>
- 
+
+Ако сакаш да го хакираш сајтов, инсталирај [node.js](http://nodejs.org) па пиши
+
+    npm install
+
+Кога едитираш фајл, едитирај ја .tmpl.html варијантата доколку постои. После тоа пушти
+
+    make
+
+за да ги избилдаш .hml варијантите
