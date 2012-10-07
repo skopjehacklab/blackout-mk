@@ -134,7 +134,7 @@
 				top: offsets[1],
                 left: offsets[0],
 				width: '100%',
-                "min-height":"100%",
+                minHeight:"100%",
 				backgroundColor: 'black',
 				textAlign: 'center',
 				paddingTop: '10px',
