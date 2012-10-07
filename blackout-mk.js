@@ -42,7 +42,8 @@
 	}
 	var onDomReady = function(fn){
 		if (document.addEventListener){
-			document.addEventListener('DOMContentLoaded', fn, false);
+			document.addEventListener('DOMContentLoaded', 
+                    function() { setTimeout(fn, 50); }, false);
 		}else{
 			IEContentLoaded(window, fn);
 		}
