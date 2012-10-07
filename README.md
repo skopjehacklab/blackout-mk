@@ -11,7 +11,7 @@
         src="//skopjehacklab.github.com/blackout-mk/blackout-mk.js">
     </script>
 
-Ако сакаш да го хакираш сајтов, инсталирај [node.js](http://nodejs.org) па пиши
+Ако сакаш да го менуваш кодот на сајтов, инсталирај [node.js](http://nodejs.org) па пиши
 
     npm install
 
