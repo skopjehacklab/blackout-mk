@@ -108,7 +108,7 @@
 	SopaBlackout.VERSION = '0.2.0';
 	SopaBlackout.MIN_HEIGHT = 100;
 	SopaBlackout.HEADER_TEXT = "Ова е изгледот на македонскиот интернет под законот ЗАКОН_ОВДЕ";
-	SopaBlackout.CONTINUE_TEXT = "(кликни за да продолжиш)";
+	SopaBlackout.CONTINUE_TEXT = "(кликни за да продолжиш) ";
 	SopaBlackout.ZINDEX = Math.pow(2, 31) - 2;
 	SopaBlackout.DEFAULTS = {
 		'id': false,

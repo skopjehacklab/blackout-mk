@@ -1,5 +1,10 @@
 var fs = require('fs'),
-    argv = require('optimist').argv;
+    path = require('path'),
+    argv = require('optimist')
+        .usage("$1 [options] file.tmpl.xx > file.xx")
+        .demand(["partialdir"])
+        .describe("partialdir", "the directory where partial files are kept")
+        .argv;
 
 var ishtml = /\.html?$/,
     templatePath = argv._[0];
@@ -9,7 +14,7 @@ fs.readFile(templatePath, 'utf8', function(err, template) {
     var remaining = ms.length;
     ms.forEach(function(m) {
         var partialPath = m.match(/\$\$(.+)\$\$/)[1];
-        fs.readFile(partialPath, 'utf8', function(err, partial) {
+        fs.readFile(path.join(argv.partialdir, partialPath), 'utf8', function(err, partial) {
             if (err) console.error(err);
             if (ishtml.test(partialPath) && !ishtml.test(templatePath)) 
                 partial = partial.replace(/[\r\n]+/g, " ");
