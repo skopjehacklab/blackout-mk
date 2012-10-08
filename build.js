@@ -7,6 +7,7 @@ var fs = require('fs'),
         .argv;
 
 var ishtml = /\.html?$/,
+    hasextension = /\./,
     templatePath = argv._[0];
 
 fs.readFile(templatePath, 'utf8', function(err, template) {
@@ -16,8 +17,12 @@ fs.readFile(templatePath, 'utf8', function(err, template) {
         var partialPath = m.match(/\$\$(.+)\$\$/)[1];
         fs.readFile(path.join(argv.partialdir, partialPath), 'utf8', function(err, partial) {
             if (err) console.error(err);
+            // embed HTML inside non-HTML
             if (ishtml.test(partialPath) && !ishtml.test(templatePath)) 
                 partial = partial.replace(/[\r\n]+/g, " ");
+            // embed constants
+            if (!hasextension.test(partialPath)) 
+                partial = partial.replace(/[\r\n]+/g,"");
             template = template.replace(m, partial);
             if (!--remaining) process.stdout.write(template);
         });
