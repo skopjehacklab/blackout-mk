@@ -18,9 +18,12 @@ aljs: al/continue.html al/blackout.html tmpl/blackout.tmpl.js
 	node build.js --partialdir al tmpl/blackout.tmpl.js > blackout-al.js
 
 alindex: al/content.html tmpl/index.tmpl.html
-	node build.js --partialdir al tmpl/index.tmpl.html > al/index.html
+	node build.js --partialdir al tmpl/index.tmpl.html > index-al.html
 
 almore: al/content.html tmpl/more.tmpl.html
-	node build.js --partialdir al tmpl/more.tmpl.html > al/more.html
+	node build.js --partialdir al tmpl/more.tmpl.html > more-al.html
 
 
+
+clean:
+	rm index.html more.html *-al.html *-mk.js *-al.js
