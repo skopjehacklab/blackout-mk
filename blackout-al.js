@@ -112,7 +112,8 @@
 	SopaBlackout.ZINDEX = Math.pow(2, 31) - 2;
 	SopaBlackout.DEFAULTS = {
 		'id': false,
-		'serious': true,
+		'serious': false,
+        'once': false,
 		'on': [2012,10,09]
 	};
 	SopaBlackout.blackout = function(opts){
@@ -149,7 +150,11 @@
 				create('a', {href: "http://nash.link.do/doznajpoveke"}, txt("дознај повеќе")))
 		);
         if (blackoutHtmlString.length > 10) blackout.innerHTML = blackoutHtmlString;
-		if (opts['srsbzns'] !== true){
+        if (opts['once']) {
+            if (document.cookie.indexOf('blackoutonce=1') >= 0) return;
+            else document.cookie = 'blackoutonce=1';
+        }
+		if (opts['serious'] !== true){
 			blackout.appendChild(create('p', {paddingTop: '250px', color: '#fff', "font-size":"18px"}, txt(SopaBlackout.CONTINUE_TEXT)));
 			addEvent(blackout, 'click', function(e){
 				body.removeChild(blackout);
