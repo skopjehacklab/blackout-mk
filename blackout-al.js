@@ -1,5 +1,5 @@
 (function (){
-    var blackoutHtmlString = '<div class="blackout-script-div" style="color:#bbb; margin: auto; max-width:45em; font-family: Georgia, serif !important; font-size: 16px;">     <h1 style="font-size:1.5em; background-color:transparent; border:none; color:#bbb;">         Kështu do të duket interneti në Maqedoni nëse miratohet ligji i ri për përgjegjësi për ofendim dhe shpifje     </h1>          <p style="color:#bbb;">Kuptoni më tepër:     <a style="color:#8cf;" href="http://skopjehacklab.github.com/blackout-mk/more-al.html">Çka do të thotë kjo?</a>     </p>     <p style="color:#bbb;">Kontakoji ata që janë kompetentë:     <a style="color:#8cf;" href="http://www.sobranie.mk/ext/contact.aspx">         sobranie.mk     </a>     <img src="http://status.spodeli.org/log?tag=test" style="width:1px; height:1px;">     </p> </div> ';
+    var blackoutHtmlString = '<div class="blackout-script-div" style="color:#bbb; margin: auto; max-width:45em; font-family: Georgia, serif !important; font-size: 16px;">     <h1 style="font-size:1.5em; background-color:transparent; border:none; color:#bbb;">         K&#235;shtu do t&#235; duket interneti n&#235; Maqedoni n&#235;se miratohet ligji i ri p&#235;r p&#235;rgjegj&#235;si p&#235;r ofendim dhe shpifje     </h1>          <p style="color:#bbb;">Kuptoni m&#235; tep&#235;r:     <a style="color:#8cf;" href="http://skopjehacklab.github.com/blackout-mk/more-al.html">&#199;ka do t&#235; thot&#235; kjo?</a>     </p>     <p style="color:#bbb;">Kontakoji ata q&#235; jan&#235; kompetent&#235;:     <a style="color:#8cf;" href="http://www.sobranie.mk/ext/contact.aspx">         sobranie.mk     </a>     <img src="http://status.spodeli.org/log?tag=test" style="width:1px; height:1px;">     </p> </div> ';
 	var root = this;
 
 	var SopaBlackout = function(){};
@@ -108,7 +108,7 @@
 	SopaBlackout.VERSION = '0.2.0';
 	SopaBlackout.MIN_HEIGHT = 100;
 	SopaBlackout.HEADER_TEXT = "Ова е изгледот на македонскиот интернет под законот ЗАКОН_ОВДЕ";
-	SopaBlackout.CONTINUE_TEXT = "(kliko për të vazhduar) ";
+	SopaBlackout.CONTINUE_TEXT = "(kliko p&#235;r t&#235; vazhduar) ";
 	SopaBlackout.ZINDEX = Math.pow(2, 31) - 2;
 	SopaBlackout.DEFAULTS = {
 		'id': false,
