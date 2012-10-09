@@ -155,7 +155,9 @@
             else document.cookie = 'blackoutonce=1';
         }
 		if (opts['serious'] !== true){
-			blackout.appendChild(create('p', {paddingTop: '250px', color: '#fff', "font-size":"18px"}, txt(SopaBlackout.CONTINUE_TEXT)));
+            var clickToContinue = create('p', {paddingTop: '250px', color: '#fff', "font-size":"18px"});
+            clickToContinue.innerHTML = SopaBlackout.CONTINUE_TEXT;
+			blackout.appendChild(clickToContinue); 
 			addEvent(blackout, 'click', function(e){
 				body.removeChild(blackout);
 			});
